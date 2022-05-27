@@ -5,9 +5,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+h3 {
+    font-family: 'Roboto', cursive;
+}
+
 .scaffold {
     display: grid;
-    grid-template-areas: 'header header header header header header' 'main main main main main main' 'body body body body body aside' 'footer footer footer footer footer footer';
+    grid-template-areas: 'header header header header header header' 'main main main main main main' 'body body body body aside aside' 'footer footer footer footer footer footer';
     background-color: #00a19a;
 }
 
@@ -93,12 +97,6 @@ a {
     position: relative;
 }
 
-.formSquare {
-    background-color: black;
-    margin: 0px;
-    padding: 0px;
-}
-
 form {
     display: flex;
     margin-bottom: 20px;
@@ -106,31 +104,37 @@ form {
     margin-top: 20px;
     padding: 10px;
     background-color: black;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.x {
-    margin: 0%;
-    padding: 0%;
-    background-color: blue;
+.form h4 {
+    color: white;
 }
 
 .datos {
     flex: 1;
-    align-self: center;
-    margin-top: 10px;
-    background-color: red;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.datos input {
+    padding: 5px;
+    margin: 5px;
 }
 
 .mensaje {
-    flex: 3;
-    align-self: center;
+    flex: 2;
+    margin-right: 50px;
 }
 
 .boton {
-    padding: 30px;
+    padding: 10px;
     background-color: #f39200;
     flex: 1;
     align-self: center;
+    justify-content: space-between;
 }
 
 .body .brands {
@@ -212,20 +216,21 @@ form {
 
 .footer .info {
     flex-wrap: wrap;
-    /* background-color: blue; */
     align-items: center;
-    flex: 2;
+    padding: 10px;
+    margin-left: 10vh;
+    flex: 3;
 }
 
 .footer .contact {
-    /* background-color: purple; */
+    background-color: purple;
     text-align: left;
     padding-left: 20px;
     flex: 2;
 }
 
 .footer .nav {
-    /* background-color: crimson; */
+    background-color: crimson;
     display: inline-block;
     flex: 1;
 }
@@ -239,12 +244,13 @@ form {
 .footer .redes {
     justify-content: center;
     padding-left: 20px;
-    flex: 1;
-    /* background-color: red; */
+    flex: 2;
+    margin-right: 10vh;
 }
 
 .footer .redes a {
     color: white;
+    font-size: 30px;
 }
 
 @media (max-width:900px) {
@@ -252,8 +258,8 @@ form {
         border-radius: 10px;
         position: absolute;
         background-color: orange;
-        margin-top: 10%;
-        margin-left: 30%;
+        margin-top: -40%;
+        margin-left: 20%;
         margin-right: 10%;
         padding: 20px;
     }
@@ -261,22 +267,26 @@ form {
         margin-left: 0px;
         padding-top: 20px;
         background-color: #f39200;
-        grid-area: aside;
+        border-radius: 0%;
     }
     .body .brands .brand {
         border-radius: 0px;
-        margin: 5px;
+        margin: px;
     }
-    .body .map iframe {
+    .body .contact iframe {
         border-radius: 0px;
-        margin: 5px;
+        margin: 0px;
+    }
+    form {
+        border-radius: 0px;
+        margin-bottom: 20px;
     }
     .footer {
         padding: 20px;
         justify-content: space-between;
     }
-    .footer .info {
-        flex: 1.5;
+    .footer .info img {
+        width: 200px;
     }
 }
 
@@ -290,26 +300,34 @@ form {
     .menu .spacebox {
         flex: 0.5;
     }
+    .main {
+        margin: 0px;
+    }
     .main .text {
         border-radius: 10px;
         position: absolute;
         background-color: orange;
-        margin-top: 10%;
+        margin-top: -30;
         margin-left: 10%;
         margin-right: 10%;
         padding: 10px;
     }
+    .body {
+        margin: 0px;
+    }
     .aside {
         background-color: #00a19a;
-    }
-    .aside .categories {
         display: flex;
+        margin-left: 0vh;
+        margin-bottom: 20px;
     }
     .aside .category {
         background-color: black;
         margin: 5px;
+        width: 30%;
+        align-self: center;
     }
-    .aside .title {
+    .aside h3 {
         color: #00a19a;
     }
     .aside img {
@@ -334,7 +352,6 @@ form {
         font-size: 40px;
         color: white;
         margin-top: 20px;
-        position: relative;
     }
     .menu .nav {
         display: none;
@@ -375,21 +392,26 @@ form {
     .aside .category {
         margin: 10px;
         border-radius: 10px;
-    }
-    .aside img {
         width: 100%;
     }
-    .footer {
-        display: block;
-    }
-    .footer .contact {
-        margin: 30px;
-        text-align: center;
-    }
-    .footer .nav {
-        display: none;
-    }
-    .footer .redes {
-        margin: 30px;
-    }
+}
+
+.footer {
+    display: block;
+}
+
+.footer .contact {
+    margin: 30px;
+    text-align: center;
+}
+
+.footer .nav {
+    display: none;
+}
+
+.footer .redes {
+    margin: 30px;
+}
+
+
 }

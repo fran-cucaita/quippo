@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/97e61179f1.js" crossorigin="anonymous"></script>
+
     <title>Quippo</title>
 </head>
 
@@ -27,6 +29,7 @@
                     <a href="">Servicios</a>
                 </div>
             </div>
+            <div class="hamb"></div>
 
 
         </div>
@@ -71,15 +74,26 @@
             </div>
 
             <div class="form">
-                <form action="">
-                    <div class="x">
-                        <input type="text" name="nombre" class="datos" placeholder="Nombre">
-                        <input type="email" name="email" class="datos" placeholder="Email">
-
+                <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+                    <div class="datos">
+                        <h4>Contactate con nosotros.</h4>
+                        <input type="text" name="nombre" placeholder="Nombre">
+                        <input type="email" name="email" placeholder="Email">
                     </div>
-                    <div><textarea name="mensaje" id="" cols="30" rows="2" placeholder="Mensaje" class="mensaje"></textarea></div>
-                    <div><input type="submit" class="boton" value="Enviar"></div>
 
+                    <div><textarea name="mensaje" id="" cols="30" rows="3" placeholder="Mensaje" class="mensaje"></textarea></div>
+                    <div><input type="submit" class="boton" value="Enviar"></div>
+                    <script>
+                        function validateForm() {
+                            let name = document.forms["myForm"]["nombre"].value;
+                            let email = document.forms["myForm"]["email"].value;
+                            let message = document.forms["myForm"]["mensaje"].value;
+                            if (name == "" || email == "" || message == "") {
+                                alert("Todos los campos son requeridos");
+                                return false;
+                            }
+                        }
+                    </script>
 
                 </form>
             </div>
@@ -112,7 +126,21 @@
 
         </div>
         <div class="footer">
+            <div class="info">
+                <img src="assets/Logo.png" alt="fondo" width="100%">
 
+
+            </div>
+            <div class="contact"></div>
+            <div class="nav"></div>
+
+            <ul class="redes">
+                <h3>Redes sociales</h3>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+
+            </ul>
         </div>
     </div>
 
