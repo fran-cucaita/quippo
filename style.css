@@ -1,0 +1,395 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.scaffold {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'main main main main main main' 'body body body body body aside' 'footer footer footer footer footer footer';
+    background-color: #00a19a;
+}
+
+.scaffold div {
+    text-align: center;
+    align-content: space-between;
+}
+
+.header {
+    background-color: black;
+    grid-area: header;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu .logo {
+    flex: 1;
+}
+
+.menu .spacebox {
+    flex: 2;
+}
+
+.hamb {
+    display: none;
+}
+
+.menu .nav {
+    flex: 3;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+
+a {
+    color: white;
+    text-decoration-line: none;
+}
+
+.main {
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 0px;
+    grid-area: main;
+    position: relative;
+}
+
+.main img {
+    position: relative;
+}
+
+.main .text {
+    z-index: 1;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #f39200;
+    margin-top: -30%;
+    margin-left: 40%;
+    margin-right: 10%;
+    padding: 20px;
+    text-align: justify;
+}
+
+.body {
+    padding-left: 10vw;
+    background-color: #00a19a;
+    grid-area: body;
+    display: flexbox;
+}
+
+.body .contact {
+    margin-top: 10px;
+    position: relative;
+}
+
+.body .contact iframe {
+    background-color: red;
+    border-radius: 10px;
+    position: relative;
+}
+
+.formSquare {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: black;
+}
+
+.x {
+    margin: 0%;
+    padding: 0%;
+    background-color: blue;
+}
+
+.datos {
+    flex: 1;
+    align-self: center;
+    margin-top: 10px;
+    background-color: red;
+}
+
+.mensaje {
+    flex: 3;
+    align-self: center;
+}
+
+.boton {
+    padding: 30px;
+    background-color: #f39200;
+    flex: 1;
+    align-self: center;
+}
+
+.body .brands {
+    background-color: #00a19a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.body .brands .brand {
+    border-radius: 10px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.body .brands .brand img {
+    margin: 10px;
+    width: 10%;
+}
+
+.body .services {
+    background-color: #00a19a;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body .services .service {
+    border-radius: 15px;
+    background-color: white;
+    margin: 1%;
+    width: 31%;
+}
+
+.body .services .service img {
+    margin: 12px;
+    width: 30%;
+}
+
+.body .services .service p {
+    margin: 12px;
+}
+
+.body .services .service h3 {
+    color: #f39200;
+    margin: 12px;
+}
+
+.body .article {
+    padding: 30px;
+}
+
+.aside {
+    border-radius: 10px;
+    margin-right: 10vw;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-top: 20px;
+    background-color: #f39200;
+    grid-area: aside;
+}
+
+.aside .category {
+    margin-top: 10px;
+}
+
+.aside .category h3 {}
+
+.footer {
+    align-items: center;
+    background-color: black;
+    grid-area: footer;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .info {
+    flex-wrap: wrap;
+    /* background-color: blue; */
+    align-items: center;
+    flex: 2;
+}
+
+.footer .contact {
+    /* background-color: purple; */
+    text-align: left;
+    padding-left: 20px;
+    flex: 2;
+}
+
+.footer .nav {
+    /* background-color: crimson; */
+    display: inline-block;
+    flex: 1;
+}
+
+.footer .nav a {
+    color: white;
+    text-decoration-line: none;
+    display: block;
+}
+
+.footer .redes {
+    justify-content: center;
+    padding-left: 20px;
+    flex: 1;
+    /* background-color: red; */
+}
+
+.footer .redes a {
+    color: white;
+}
+
+@media (max-width:900px) {
+    .main .text {
+        border-radius: 10px;
+        position: absolute;
+        background-color: orange;
+        margin-top: 10%;
+        margin-left: 30%;
+        margin-right: 10%;
+        padding: 20px;
+    }
+    .aside {
+        margin-left: 0px;
+        padding-top: 20px;
+        background-color: #f39200;
+        grid-area: aside;
+    }
+    .body .brands .brand {
+        border-radius: 0px;
+        margin: 5px;
+    }
+    .body .map iframe {
+        border-radius: 0px;
+        margin: 5px;
+    }
+    .footer {
+        padding: 20px;
+        justify-content: space-between;
+    }
+    .footer .info {
+        flex: 1.5;
+    }
+}
+
+@media (max-width:767px) {
+    .scaffold {
+        display: grid;
+        grid-template-areas: 'header header header header header header' 'main main main main main main' 'body body body body body body' 'aside aside aside aside aside aside''footer footer footer footer footer footer';
+        padding-right: 0%;
+        padding-left: 0%
+    }
+    .menu .spacebox {
+        flex: 0.5;
+    }
+    .main .text {
+        border-radius: 10px;
+        position: absolute;
+        background-color: orange;
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 10px;
+    }
+    .aside {
+        background-color: #00a19a;
+    }
+    .aside .categories {
+        display: flex;
+    }
+    .aside .category {
+        background-color: black;
+        margin: 5px;
+    }
+    .aside .title {
+        color: #00a19a;
+    }
+    .aside img {
+        width: 100%;
+        height: 200px;
+    }
+    .footer {
+        font-size: smaller;
+    }
+    .footer .contact {
+        flex: 1;
+    }
+}
+
+@media (max-width:480px) {
+    .menu {
+        margin-left: 20px;
+    }
+    .hamb {
+        flex: 1;
+        display: block;
+        font-size: 40px;
+        color: white;
+        margin-top: 20px;
+        position: relative;
+    }
+    .menu .nav {
+        display: none;
+    }
+    .main .text {
+        border-radius: 0px;
+        position: relative;
+        z-index: 1;
+        background-color: orange;
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 20px;
+        opacity: 1;
+    }
+    .main img {
+        height: 200px;
+    }
+    .body .brands .brand {
+        margin: 0px;
+        display: block;
+    }
+    .body .brands .brand img {
+        margin: 15px;
+        width: 15%;
+    }
+    .body .services .service {
+        margin: 5px;
+        width: 100%;
+    }
+    .body .services .service img {
+        margin: 12px;
+        width: 30%;
+    }
+    .aside .categories {
+        display: block;
+    }
+    .aside .category {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    .aside img {
+        width: 100%;
+    }
+    .footer {
+        display: block;
+    }
+    .footer .contact {
+        margin: 30px;
+        text-align: center;
+    }
+    .footer .nav {
+        display: none;
+    }
+    .footer .redes {
+        margin: 30px;
+    }
+}
